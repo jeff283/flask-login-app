@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {} {% block head %}
+<title>Create</title>
+{% endblock %} {% block body %}
+
+<h2>New Account</h2>
+<form action="/new-acc" method="POST">
+    <div class="inputBx">
+        <input type="text" placeholder="Username" name="username" autofocus>
+        <img src="{{ url_for('static', filename='user.png') }}" alt="User thumbnail">
+    </div>
+    <div class="inputBx">
+        <input type="password" placeholder="Password" name="password">
+        <img src="{{ url_for('static', filename='lock.png') }}" alt="Password thumbnail">
+    </div>
+    <div class="inputBx">
+        <input type="password" placeholder="Confrim Password" name="conpassword">
+        <img src="{{ url_for('static', filename='lock.png') }}" alt="Password thumbnail">
+    </div>
+    <div class="inputBx">
+        <input type="submit" value="Create">
+    </div>
+</form>
+
+{% endblock %}

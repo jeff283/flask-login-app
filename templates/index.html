@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {} {% block head %}
+<title>Login</title>
+{% endblock %} {% block body %}
+<h2>Login</h2>
+<form action="/login" method="POST">
+    <div class="inputBx">
+        <input type="text" placeholder="Username" name="username" autofocus>
+        <img src="{{ url_for('static', filename='user.png') }}" alt="User thumbnail">
+    </div>
+    <div class="inputBx">
+        <input type="password" placeholder="Password" name="password">
+        <img src="{{ url_for('static', filename='lock.png') }}" alt="Password thumbnail">
+    </div>
+    <label class="remember"><input type="checkbox">
+    Remember Me</label>
+    <div class="inputBx">
+        <input type="submit" value="Login">
+    </div>
+</form>
+<p>Forget <a href="#">Password</a></p>
+<p>Need an <a href="/create">account</a></p>
+
+{% endblock %}
